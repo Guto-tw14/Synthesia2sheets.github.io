@@ -1,0 +1,91 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: darkslategray;
+}
+
+.fileButton {
+  height: 100%;
+  width: 100%;
+  background-color: lightgreen;
+  transition: .3s ease all;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.fileButton:hover {
+  background-color: skyblue;
+  transition: .3s ease all;
+  transform: translateY(-5px);
+}
+
+.fileSelectionDiv {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.videoPlayerDiv {
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#videoPlayer {
+  width: calc(100% - 10%);
+  height: calc(100% - 10%);
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.videoPlayerBars {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.videoPlayerLeftBar {
+  height: 100%;
+  width: 5%;
+  background-color: rgb(19, 33, 33);
+}
+
+.videoPlayerBottomBar {
+  height: 10%;
+  width: 100%;
+  background-color: rgb(19, 33, 33);
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+  opacity: 1 !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none;
+}
+

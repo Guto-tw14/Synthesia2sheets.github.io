@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Synthesia2Sheets</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="./music-solid.svg"> <!-- set page's icon -->
+    <link rel="shortcut icon" href="./music-solid.svg"> <!-- set page's icon -->
 </head>
-    <body>
-        <button>Select File</button>
-    </body>
+<body>
+    <div class="fileSelectionDiv">
+        <input type="file" id="fileInput" style="display: none" accept="video/*"> <!--invisible input to select file -->
+        <label for="fileInput">
+            <button class="fileButton">Select File</button> <!-- visible button that activates the invisivble input-->
+        </label>
+        
+    </div>
+
+    <div class="videoPlayerDiv"> <!-- div for when the video is loaded -->
+        <video id="videoPlayer" width="90%" height="90vh"></video>
+        <div class="videoPlayerBars">
+            <div class="videoPlayerLeftBar"></div>
+            <div class="videoPlayerBottomBar"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
 </html>
